@@ -1,0 +1,9 @@
+{% macro select(label, value, hasMarker) %}
+<div class="select">
+  <label for="" class="select__label">{{label}}</label>
+  <div class="select__wrapper {{'select__wrapper_mapMarker' if hasMarker}}">
+    <span class="select__value">{{value}}</span>
+    <img src="../img/shevron-dawn.svg" alt="shevron" class="select__shevron">
+  </div>
+</div>
+{% endmacro %}

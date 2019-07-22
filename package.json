@@ -1,0 +1,38 @@
+{
+  "name": "koaMongoDB",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server.js",
+    "start:dev": "nodemon server.js",
+    "lint": "eslint ./src/**/*.js server.js",
+    "gulp": "gulp build",
+    "lint:fix": "eslint ./src/**/*.js --fix",
+    "heroku-postbuild": "npm run gulp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-helmet": "^4.2.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.2.0",
+    "mongoose": "^5.6.5",
+    "nunjucks": "^3.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "nodemon": "^1.19.1"
+  },
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.4.1"
+  }
+}

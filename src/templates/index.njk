@@ -1,0 +1,54 @@
+{% extends "base.njk" %} 
+{% import "macros/datePiker.njk" as dp %}
+{% import "macros/button.njk" as btn %}
+{% import "macros/sortBox.njk" as s %}
+{% import "macros/resultItem.njk" as res %}
+
+
+{% block content %}
+  <main class="searchBox">
+    <section class="selectGroup">
+        <div class="select">
+          <label for="" class="select__label">location</label>
+          <div class="select__wrapper select__wrapper_mapMarker">
+            <span class="select__value"></span>
+            <img src="../img/shevron-dawn.svg" alt="shevron" class="select__shevron">
+          </div>
+        </div> 
+        <div class="select">
+          <label for="" class="select__label">CATEGORY</label>
+          <div class="select__wrapper ">
+            <span class="select__value">Category</span>
+            <img src="../img/shevron-dawn.svg" alt="shevron" class="select__shevron">
+          </div>
+        </div> 
+        <div class="select">
+          <label for="" class="select__label">SERVICE</label>
+          <div class="select__wrapper ">
+            <span class="select__value">servise</span>
+            <img src="../img/shevron-dawn.svg" alt="shevron" class="select__shevron">
+          </div>
+        </div>      
+        <div class="select">
+          <label for="" class="select__label">SUBCATEGORY</label>
+          <div class="select__wrapper ">
+            <span class="select__value">Subcategory</span>
+            <img src="../img/shevron-dawn.svg" alt="shevron" class="select__shevron">
+          </div>
+        </div>
+      {{dp.date("PERIOD", "11/01/19 - 14/01/19")}}
+      {{btn.button("SEARCH")}}
+    </section>
+    <section class="results">
+      {{s.sortBox()}}
+      <div class="searchResults">
+        {% for user in users %}
+          <div>
+          {{res.resultItem
+          (user.firstName, user.lastName, user.city, user.country, user.category, user.dailyRate, user._id)}}
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+{% endblock %}

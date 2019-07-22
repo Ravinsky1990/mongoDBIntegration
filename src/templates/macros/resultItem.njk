@@ -1,0 +1,23 @@
+{% macro resultItem(firstName, lastName, city, country, category, dailyRate, id) %}
+  <figure class="resItem">
+    <div class="resItem__avatar">
+      <img src="img/Faruh.png" alt="rt">
+    </div>
+    <div class="resItem__content">
+      <div class="resItem__name">
+        <span>{{firstName}} {{lastName}}</span><img src="../img/gold.svg" alt="gold">
+      </div>
+      <div class="resItem__location">
+        <img src="../img/map.svg" alt="map"><span>{{city}}, {{country}}</span>
+      </div>
+      <div class="resItem__stackInfo">
+        <span class="resItem__stack">Stack: </span><span class="resItem__detail">{{category}}</span>
+        <a href="/profile?id={{id}}">More</a>
+      </div>
+      <div class="resItem__rateInfo">
+        <span class="resItem__rate">Base Daily Rate: </span>
+        <span class="resItem__rateVal">$ {{dailyRate}} USD</span>
+      </div>
+    </div>
+  </figure>
+{% endmacro %}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header class="topLineForm">
+    <div class="fixerLogo">
+      <img src="img/logo.svg" alt="logo" class="fixerLogo__arrow">
+      <img src="img/fixerLogo.png" alt="fixer" class="fixerLogo__fixer">
+    </div>
+    <div class="signUpLink">
+      <span class="signUpLink__dontHave"></span>
+      <a href="sigh_in" class="signUpLink__link"></a>
+    </div>
+  </header>
+  <main>
+    <form action="/success" method="POST" class="signInForm">
+      <h1 class="signInForm__title">Sign up</h1>
+      <div class="dubleInput">
+          <input name="firstName" type="text" placeholder="First name" class="formInput formInput_small">
+          <input name="lastName" type="text" placeholder="Last name" class="formInput formInput_small">
+      </div>
+      <input name="userName" type="text" placeholder="Username" class="formInput">
+      <input name="email" type="email" placeholder="Eimail" class="formInput">
+      <input name="country" type="text" placeholder="Country" class="formInput">
+      <input name="city" type="text" placeholder="City" class="formInput">
+      <select name="category" class="formInput">
+        <option value="js" selected>JS</option>
+        <option value="Python">Python</option>
+      </select>
+      <input name="mobileFone" type="tel" placeholder="Mobile fone" class="formInput">
+      <select name="title" class="formInput">
+        <option value="Mr" selected>Mr</option>
+        <option value="Ms">Ms</option>
+      </select>
+      <input name="dailyRate" type="text" placeholder="Daily Rate" class="formInput">
+      <div class="signInForm__btnWrap">
+        <button class="formBtn">Get started</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

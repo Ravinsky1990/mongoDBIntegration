@@ -1,0 +1,19 @@
+{% macro sortBox() %}
+<div class="sortBox">
+  <div class="sortBox__showLink">
+    <span>SHOW MAP</span>
+  </div>
+  <div class="sortBox__checkBoxWrapper">
+    <div class="sortBox__byPrice">
+      <span class="sortBox__checked">
+        <span class="sortBox__greenMarker sortBox__greenMarker_active"></span>
+      </span>
+      <span class="sortBox__value">by price</span>
+    </div>
+    <div class="sortBox__byRaiting">
+      <span class="sortBox__checked"></span>
+      <span class="sortBox__value">by rating</span>
+    </div>
+  </div>
+</div>
+{% endmacro %}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,600&display=swap" rel="stylesheet">
+  <title>Account info</title>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo">
+      <a href="/search">
+        <img src="img/logo_profile.svg" alt="logo">
+      </a>
+    </div>
+    <nav class="sidebar__navigation">
+        <a href="/" class="sidebar__link">
+            <img src="img/search.svg" alt="search">
+            <span class="sidebar__vertical-marker"></span>
+        </a>
+        <a href="#" class="sidebar__link">
+            <img src="img/my_profile.svg" alt="myprofile">
+            <span class="sidebar__vertical-marker sidebar__vertical-marker_active"></span>
+        </a>
+        <a href="chat" class="sidebar__link">
+            <img src="img/messages.svg" alt="message">
+            <span class="sidebar__vertical-marker"></span>
+        </a>
+        <a href="#" class="sidebar__link">
+          <img src="img/calendar.svg" alt="calrndar">
+          <span class="sidebar__vertical-marker"></span>
+      </a>
+    </nav>
+  </aside>
+  <header class="top-line">
+    <ul class="top-line__rout">
+        <li class="top-line__route-list-item">
+          <a href="#" class="top-line__rout-link">Home</a>
+          <img class="top-line__shevron top-line__shevron_visible"src="img/shevron-right.svg"alt="shevron">
+        </li>
+        <li class="top-line__route-list-item">
+          <a href="#" class="top-line__rout-link">Account info</a>
+          <img class="top-line__shevron" src="img/shevron-right.svg" alt="shevron">
+        </li>
+    </ul>
+    <div class="current-user">
+        <span class="current-user__name">{{userName}}</span>
+  </header>
+  <section class="Info">
+    <div class="tabs">
+        <div class="tabs__personal tabsGrey"><a href="/profile?id={{id}}" style="color:inherit">PERSONAL INFORMATION</a></div>
+        <div class="tabs_account tabsBorderBlu">ACCOUNT INFORMATION</div>
+    </div>
+    <div class="accountInfo" style="justify-content: space-between">
+      <div class="userName">
+          <label>User name</label>
+          <div class="formInput formInput_personalInfo">{{userName}}</div>
+      </div>
+      <div class="userEmail">
+          <label>E-mail</label>
+          <div class="formInput formInput_personalInfo">{{email}}</div>
+      </div>
+      <div class="userEmail">
+          <label>Category</label>
+          <div class="formInput formInput_personalInfo">{{category}}</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
