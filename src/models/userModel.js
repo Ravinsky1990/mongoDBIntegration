@@ -40,7 +40,7 @@ const userSchema = new mongoose.Schema({
   },
   title:{
     type:String,
-    enum: ['Mr', 'Ms'],
+    enum:['Mr', 'Ms'],
   },
   dailyRate:{
     type:String
