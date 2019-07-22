@@ -38,15 +38,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     trim: true,
   },
-<<<<<<< HEAD
   title: {
     type: String,
     enum: ['Mr', 'Ms'],
-=======
-  title:{
-    type:String,
-    enum:['Mr', 'Ms'],
->>>>>>> fdd04a556002d7e56d6ea7051e7ddb3ea4dd0852
   },
   dailyRate: {
     type: String,
