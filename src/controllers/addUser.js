@@ -1,23 +1,22 @@
-const userModel = require('../models/userModel')
+const userModel = require('../models/userModel');
 
 module.exports = async (ctx) => {
-  //extract req body
+  // extract req body
   const userData = ctx.request.body;
 
-  //write to db
+  // write to db
   let user = new userModel(userData);
-  try{
+  try {
     user = await user.save();
-    await ctx.render('success',{
-    id:user._id,
-    msg:`${user.firstName}, you are successful!`,
-    name:user.firstName
-  });
-  console.log(user._id)
-  }catch(err){
-    //console.log(err)
-    await ctx.render('errorPage',{
-      msg:err._message
-    })
+    await ctx.render('success', {
+      id: user._id,
+      msg: `${user.firstName}, you are successful!`,
+      name: user.firstName,
+    });
+  } catch (err) {
+    // console.log(err)
+    await ctx.render('errorPage', {
+      msg: err._message,
+    });
   }
-}
+};

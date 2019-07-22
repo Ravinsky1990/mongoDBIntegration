@@ -1,51 +1,50 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-  firstName:{
-  	type:String,
-  	minlength: 2,
-  	trim:true
-  },
-  lastName:{
-  	type:String,
-  	minlength: 2,
-  	trim:true
-  },
-  userName:{
-  	type:String,
-  	minlength: 2,
-  	trim:true
-  },
-  email:{
-  	type:String
-  },
-  country:{
-    type:String,
+  firstName: {
+    type: String,
     minlength: 2,
-    trim:true
+    trim: true,
   },
-  city:{
-    type:String,
+  lastName: {
+    type: String,
     minlength: 2,
-    trim:true
+    trim: true,
   },
-  mobileFone:{
-    type:String,
+  userName: {
+    type: String,
+    minlength: 2,
+    trim: true,
+  },
+  email: {
+    type: String,
+  },
+  country: {
+    type: String,
+    minlength: 2,
+    trim: true,
+  },
+  city: {
+    type: String,
+    minlength: 2,
+    trim: true,
+  },
+  mobileFone: {
+    type: String,
     minlength: 6,
-    trim:true
+    trim: true,
   },
-  category:{
-    type:String,
-    trim:true
+  category: {
+    type: String,
+    trim: true,
   },
-  title:{
-    type:String,
+  title: {
+    type: String,
     enum: ['Mr', 'Ms'],
   },
-  dailyRate:{
-    type:String
-  }
+  dailyRate: {
+    type: String,
+  },
 });
 
 module.exports = mongoose.model('User', userSchema);
-

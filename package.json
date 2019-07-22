@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node server.js",
+    "start": "node server.js",
     "start:dev": "nodemon server.js",
     "lint": "eslint ./src/**/*.js server.js",
+    "lint:fix": "eslint ./src/**/*.js server.js --fix",
     "gulp": "gulp build",
-    "lint:fix": "eslint ./src/**/*.js --fix",
     "heroku-postbuild": "npm run gulp"
   },
   "keywords": [],
@@ -26,7 +26,9 @@
     "nunjucks": "^3.2.0"
   },
   "devDependencies": {
-    "eslint": "^6.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.0.2",
     "nodemon": "^1.19.1"
